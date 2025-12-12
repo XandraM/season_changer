@@ -1,0 +1,58 @@
+#summer {
+    text-align: center;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+#summer h1 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding-top: 5vh;
+    font-size: 12vw;
+    line-height: 1;
+
+    text-shadow:
+            -3px -3px 0 #000,
+            3px -3px 0 #000,
+            -3px  3px 0 #000,
+            3px  3px 0 #000,
+            -3px  0 0 #000,
+            3px  0 0 #000,
+            0 -3px 0 #000,
+            0  3px 0 #000;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;  /* natiahne video a zachová proporcie */
+    z-index: 0;
+}
+
+
+#summer p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 1.5vw;
+    line-height: 1.5;
+
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+}

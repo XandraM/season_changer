@@ -1,0 +1,75 @@
+#winter {
+    text-align: center;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    background-image: url("../images/zima.jpg");  /* zimný obrázok */
+    background-size: 100% 95%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+#winter h1 {
+    position: relative;
+    z-index: 2;
+    color: #ddd;
+    text-align: center;
+    margin: 0;
+    padding-top: 5vh;
+    font-size: 12vw;
+    line-height: 1;
+
+    text-shadow:
+            -3px -3px 0 #000,
+            3px -3px 0 #000,
+            -3px  3px 0 #000,
+            3px  3px 0 #000,
+            -3px  0 0 #000,
+            3px  0 0 #000,
+            0 -3px 0 #000,
+            0  3px 0 #000;
+}
+
+#falling-snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/vlocky.jpg"), url("../images/vlocky.jpg");
+    background-repeat: repeat, repeat;         /* opakovanie vedľa seba aj pod sebou */
+    background-size: 30% auto, 30% auto;       /* veľkosť vločiek */
+    z-index: 0;
+    opacity: 0.8;
+
+    animation: fall_snow 30s linear infinite;
+}
+
+@keyframes fall_snow {
+    0% { background-position: 0 -100%, 50% -200%; }
+    100% { background-position: 0 100%, 50% 200%; }  /* padanie zhora nadol */
+}
+
+#winter p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 1.5vw;
+    line-height: 1.5;
+
+    /* čierny obrys textu */
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+}

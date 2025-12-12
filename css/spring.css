@@ -1,0 +1,76 @@
+#spring {
+    text-align: center;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    background-image: url("../images/jar.jpg");
+    background-size: 100% 95%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+#spring h1 {
+    position: relative;       /* umožní použiť z-index */
+    z-index: 2;               /* väčšie číslo → nad lupienkami */
+    color: #ddd;
+    text-align: center;
+    margin: 0;
+    padding-top: 5vh;        /* posun odhora, uprav podľa potreby */
+    font-size: 12vw;          /* veľkosť nadpisu */
+    line-height: 1;
+
+    text-shadow:
+            -3px -3px 0 #000,
+            3px -3px 0 #000,
+            -3px  3px 0 #000,
+            3px  3px 0 #000,
+            -3px  0 0 #000,
+            3px  0 0 #000,
+            0 -3px 0 #000,
+            0  3px 0 #000;
+}
+
+
+#moving-petals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/lupienok.jpg"), url("../images/lupienok.jpg");
+    background-repeat: repeat, repeat;
+    background-size: 1% auto, 1% auto;
+    z-index: 0;
+    opacity: 0.35;
+
+    animation: move_petals 40s linear infinite;
+}
+
+@keyframes move_petals {
+    0% { background-position: 0 0, 100% 0; }
+    100% { background-position: -100% 0, 0 0; }
+}
+
+#spring p {
+    position: relative;
+    z-index: 2;                 /* nad lupienkami */
+    color: white;               /* farba textu */
+    text-align: center;          /* centrovanie */
+    width: 60%;                  /* zúženie textu */
+    margin: 20px auto;           /* stred a malé odsadenie */
+    font-size: 1.5vw;            /* veľkosť textu, uprav podľa potreby */
+    line-height: 1.5;            /* riadkovanie pre lepšiu čitateľnosť */
+
+    /* čierny obrys textu */
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+}
