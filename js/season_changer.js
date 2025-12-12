@@ -3,7 +3,8 @@ client.connect({onSuccess: onConnect, reconnect: true, useSSL: true, keepAliveIn
 
 function onConnect() {
     console.log("Connected to MQTT broker");
-    client.subscribe("openlab/voice/recognition");
+    // client.subscribe("openlab/voice/recognition");
+    client.subscribe("simulator/voice/recognition/am720fg");
 }
 
 client.onMessageArrived = function (message) {
