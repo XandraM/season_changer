@@ -1,5 +1,6 @@
 const client = new Paho.Client("openlab.kpi.fei.tuke.sk", 443, "player" + Date.now());
 client.connect({onSuccess: onConnect, reconnect: true, useSSL: true, keepAliveInterval: 10, timeout: 10});
+console.log("JS LOADED");
 
 function onConnect() {
     console.log("Connected to MQTT broker");
