@@ -15,7 +15,7 @@ client.onMessageArrived = function (message) {
     if (value === "jar" || value === "leto" || value === "jesen" || value === "zima") {
         showOnlySeason(value);
     }
-    else if (value === "koniec") {
+    else if (value === "koniec" || value === "stop") {
         showOnlySeason("intro");
     }
 };
