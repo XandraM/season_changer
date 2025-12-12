@@ -1,4 +1,4 @@
-#spring {
+#jar {
     text-align: center;
     position: relative;
 
@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-#spring h1 {
+#jar h1 {
     position: relative;       /* umožní použiť z-index */
     z-index: 2;               /* väčšie číslo → nad lupienkami */
     color: #ddd;
@@ -57,7 +57,7 @@
     100% { background-position: -100% 0, 0 0; }
 }
 
-#spring p {
+#jar p {
     position: relative;
     z-index: 2;                 /* nad lupienkami */
     color: white;               /* farba textu */

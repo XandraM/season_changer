@@ -1,4 +1,4 @@
-#autumn {
+#jesen {
     text-align: center;
     position: relative;
 
@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-#autumn h1 {
+#jesen h1 {
     position: relative;
     z-index: 2;
     color: #ddd;
@@ -56,7 +56,7 @@
     100% { background-position: 0 100%, 50% 200%; }  /* padanie zhora nadol */
 }
 
-#autumn p {
+#jesen p {
     position: relative;
     z-index: 2;
     color: white;
