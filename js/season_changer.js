@@ -4,17 +4,15 @@ client.connect({onSuccess: onConnect, reconnect: true, useSSL: true, keepAliveIn
 function onConnect() {
     console.log("Connected to MQTT broker");
     // client.subscribe("openlab/voice/recognition");
-    client.subscribe("simulator/voice/recognition/am720fg");
+    client.subscribe("openlab/weather_changer");
 }
 
 client.onMessageArrived = function (message) {
-    const text = message.payloadString.trim().toLowerCase();
-    console.log("Received:", text);
+    const jsonMessage = JSON.parse(message.payloadString);
+    const {value} = jsonMessage;
 
-    const seasons = ["jar", "leto", "jesen", "zima"];
-
-    if (seasons.includes(text)) {
-        showOnlySeason(text);
+    if (value === "jar" || value === "leto" || value === "jesen" || value === "zima") {
+        showOnlySeason(value);
     }
 };
 
